@@ -73,3 +73,17 @@ docker login shlomine.jfrog.io
 sudo docker tag 81543797c1c8 shlomine.jfrog.io/shlomine/spring/petclinic
 
 sudo docker push shlomine.jfrog.io/shlomine/spring/petclinic
+
+sudo apt install git-lfs
+
+git lfs install
+
+git lfs track "*.gz"
+
+mv ../petclinic-latest.tar.gz .
+
+git add petclinic-latest.tar.gz
+
+git commit -m "Add docker bkp"
+
+git push
